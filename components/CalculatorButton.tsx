@@ -1,5 +1,5 @@
 import { globalStyles } from '@/styles/global-styles';
-import { Pressable, Text } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { Colors } from '../constants/Colors';
 import * as Haptics from 'expo-haptics';
 
