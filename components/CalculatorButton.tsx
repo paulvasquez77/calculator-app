@@ -26,7 +26,7 @@ export default function CalculatorButton({
         opacity: pressed ? 0.8 : 1,
         width: doubleSize ? 180 : 80,
       })}
-      onPress={() => Haptics.selectionAsync()}
+      onPress={() => { Haptics.selectionAsync(); onpress() }}
     >
       <Text
         style={{

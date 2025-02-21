@@ -3,11 +3,13 @@ import { Text, TextProps } from 'react-native';
 
 interface Props extends TextProps {
   variant?: 'h1' | 'h2';
+  alerta?: () => void
 }
 
 export default function ThemeText({
   children,
   variant = 'h1',
+  alerta,
   ...rest
 }: Props) {
   return (
@@ -20,6 +22,7 @@ export default function ThemeText({
       {...rest}
       numberOfLines={1}
       adjustsFontSizeToFit
+      onPress={alerta}
     >
       {children}
     </Text>
