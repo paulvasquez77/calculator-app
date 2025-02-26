@@ -5,10 +5,10 @@ import * as Haptics from 'expo-haptics';
 
 interface Props {
   label: string;
-  color: string;
+  color?: string;
   blackText?: boolean;
   doubleSize?: boolean;
-  onpress: () => void;
+  onPress: () => void;
 }
 
 export default function CalculatorButton({
@@ -16,7 +16,7 @@ export default function CalculatorButton({
   color = Colors.darkGray,
   blackText = false,
   doubleSize = false,
-  onpress,
+  onPress,
 }: Props) {
   return (
     <Pressable
@@ -26,7 +26,7 @@ export default function CalculatorButton({
         opacity: pressed ? 0.8 : 1,
         width: doubleSize ? 180 : 80,
       })}
-      onPress={() => { Haptics.selectionAsync(); onpress() }}
+      onPress={() => { Haptics.selectionAsync(); onPress() }}
     >
       <Text
         style={{
